@@ -14,6 +14,11 @@ int main() {
   c.red = 0;
   c.green = MAX_COLOR;
   c.blue = 0;
+  int x = 0;
+  while(x <= 500){
+	  draw_line(x,0,500-x,500,s,c);
+	  x+= 5;
+  }
 
   clear_screen(s);
 

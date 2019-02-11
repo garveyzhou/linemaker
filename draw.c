@@ -52,7 +52,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   else{
     //OCT2
     if(rise > 0){
-      d = a +2*b;
+      int d = a +2*b;
       while(y <= y1){
 	plot(s,c,x,y);
 	if(d < 0){
@@ -65,7 +65,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
     }
     //OCT7
     if(rise < 0){
-      d= a-2*b;
+      int d= a-2*b;
       while( y >= y1){
 	plot(s,c,x,y);
 	if(d > 0){
