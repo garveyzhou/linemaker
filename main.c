@@ -15,11 +15,12 @@ int main() {
   c.green = MAX_COLOR;
   c.blue = 0;
   int x = 0;
-  while(x <= 500){
-	  draw_line(x,0,500-x,500,s,c);
-	  x+= 5;
+  while(x < 500){
+  	draw_line(250,250,500-x,0,s,c);
+	draw_line(250,250,500-x,500,s,c);
+	x += 5;
   }
-
+  //save_ppm(s,"Image.ppm");
   clear_screen(s);
 
 

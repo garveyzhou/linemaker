@@ -20,8 +20,8 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   y = y0;
   int rise = y1 - y0;
   int run = x1 - x0;
-  int a = run * 2;
-  int b = -rise * 2;
+  int a = rise;
+  int b = -run;
   if(abs(rise) <= abs(run)){
     int d = 2*a +b;
     //OCT1
@@ -37,7 +37,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
       }
     }
     //OCT8
-    if(rise < 0){
+    else if(rise < 0){
       while(x <= x1){
 	plot(s,c,x,y);
 	if(d < 0){
@@ -64,7 +64,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
       }
     }
     //OCT7
-    if(rise < 0){
+    else if(rise < 0){
       int d= a-2*b;
       while( y >= y1){
 	plot(s,c,x,y);
